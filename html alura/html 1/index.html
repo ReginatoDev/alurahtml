@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<input/>
+<button> Sortear Ganhador </button>
+
+<script>
+
+    function sorteia() {
+        Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(quantidade) {
+        var numeros = [];
+
+        var numero = 1;
+
+        while(numero <= quantidade) {
+
+    var numeroAleatorio = sorteiaNumeros(5);
+    var achou = false;
+
+    for(var posicao = 0; posicao < numeros.length; numeros++){
+
+        if(numeros[posicao] == numeroAleatorio){
+            achou = true;
+            break;
+        }
+
+    }
+
+    if(achou == false){
+        numeros.push(numeroAleatorio);
+        numero++
+        }
+    }
+}
+
+    console.log(numeros)
+
+    var input = document.querySelector("input");
+
+    function verifica() {
+        var achou = false;
+
+        for(var posicao = 0; posicao < numeros.length; posicao++) {
+    if(input.value == numeros[posicao]) {
+        alert("Você Acertou!");
+        achou = true;
+        break;
+
+    }
+}
+    if(achou == false){
+        alert("Você Errou!");
+    }
+
+    input.value = "";
+    input.focus();
+}
+
+ var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

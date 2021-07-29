@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<body bgcolor="Fumante">
+ <h1> Alcool ou gasolina? </h1>
+</body>
+
+<script>
+	function mostra(teste) {
+		document.write(teste);
+		document.write("<br>");
+	}
+	
+  var tanque = 40;
+  var caminhoComGasolina = 480;
+  var custoComGasolina = caminhoComGasolina/tanque;
+	mostra("O gasto de gasolina é:" + custoComGasolina + "km/L");
+	 
+	var caminhoComAlcool = 300;
+	var consumoComAlcool = caminhoComAlcool/tanque;
+    mostra("O gasto com alcool é:" + consumoComAlcool + "km/L");
+	
+	mostra("Olá mundo!");
+</script>
