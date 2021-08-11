@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/ag.css">
+    <title>About Games | Início</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        
+        <nav id='menu'>
+            <div id="logo">
+                <figure>
+                  <img src="/img/about.png" width="120px" height="40" alt="cine+" margin="150px">
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <b>
+            <ul>
+              <li><a href='/./index.html'>INÍCIO</a></li>
+              <li><a class='dropdown-arrow' href='#'>NOTÍCIAS</a>
+                <ul class='sub-menus'>
+                  <li><a href='/paginasn/csgo.html'>CS GO</a></li>
+                  <li><a href='/paginasn/minecraft.html'>MINECRAFT</a></li>
+                  <li><a href='/paginasn/fortnite.html'>FORTNITE</a></li>
+                  
+                </ul>
+              </li>
+              <li><a href='/paginasn/register.html'>FÓRUM</a></li>
+              <li><a href='/paginasn/sorteador.html'>SORTEADOR</a></li>
+            </ul>
+        </b>
+    </figure>
+        </div>
+          </nav>
+        </header>
+        
+<center>
+    <input />
+    <button>SORTEAR</button>
+</center>
+
+<script>
+
+    var input = document.querySelector("input");
+    var numero = input.value;
+
+    function sortear() {
+        return Math.round(Math.random() * input.value);
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+    }
+
+    function verifica() {
+
+        if (input.value > 1) {
+
+            mostra("<h1> O ganhador foi: " + sortear());
+
+        }
+        if (input.value <= 1) {
+            alert("Voce não pode usar 0 ou um numero menor que 0!");
+        }
+    }
+
+    input.focus();
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>
+</body>
+</html>
